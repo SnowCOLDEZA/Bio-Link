@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url('img/backdrop/wps.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #daf3fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* changed to min-height for better responsiveness */
+    margin: 0;
+}
+
+.container {
+    border-radius: 15px;
+    width: 750px;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile {
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #daf3fa;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-family: 'SnowBlue';
+    font-size: 44px;
+    margin: 5px 0;
+    font-weight: 400;
+}
+
+.bio {
+    font-family: 'SnowHut';
+    color: #daf3fa;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #daf3fa;
+    color: #4489b0;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'SnowHut';
+    font-size: 24px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.link img {
+    margin-right: 10px; 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 10px;
+}
+
+.link-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center; 
+    flex: 1; 
+}
+
+.link-content span {
+    display: block; 
+}
+
+.desc {
+    font-family: 'Freeride';
+    font-size: 16px;
+    color: #4489b0;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+/* Custom font loading */
+@font-face{
+    font-family: 'SnowtopCaps';
+    src: url('font/snowtop_caps/SnowtopCaps.otf');
+    font-display: swap;
+}
+@font-face{
+    font-family: 'SnowySeason';
+    src: url('font/snowy_season/Snowy\ Season.ttf');
+    font-display: swap;
+}
+@font-face{
+    font-family: 'SnowBlue';
+    src: url('font/snow-blue/SNOW\ BLUE.ttf');
+    font-display: swap;
+}
+@font-face{
+    font-family: 'SnowHut';
+    src: url('font/snowhut/SnowHut/SnowHut.ttf');
+    font-display: swap;
+}
+@font-face{
+    font-family: 'snowkybrush';
+    src: url('font/snowkybrush/snowkybrush.ttf');
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Freeride';
+    src: url('font/freeride/Freeride/Freeride.otf');
+    font-display: swap;
+}
+
+/* Media Query for Mobile (Android) Devices */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust width to fit mobile screen */
+        padding: 15px; /* Add padding for smaller screens */
+    }
+
+    .profile-picture {
+        width: 80px; /* Reduce profile picture size for mobile */
+        height: 80px;
+    }
+
+    .name {
+        font-size: 36px; /* Adjust font size for mobile */
+    }
+
+    .bio {
+        font-size: 20px; /* Adjust font size for mobile */
+    }
+
+    .link {
+        font-size: 20px; /* Adjust font size of links */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .desc {
+        font-size: 14px; /* Adjust description font size */
+    }
+
+    .links {
+        gap: 8px; /* Reduce the gap between the links */
+    }
+}
+
+/* Media Query for Extra Small Devices (e.g., small Android phones) */
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* Further reduce the container width */
+    }
+
+    .name {
+        font-size: 28px; /* Reduce name font size */
+    }
+
+    .bio {
+        font-size: 18px; /* Adjust bio font size */
+    }
+
+    .link {
+        font-size: 18px; /* Reduce font size for smaller links */
+        padding: 8px; /* Reduce padding for smaller screens */
+    }
+
+    .desc {
+        font-size: 12px; /* Adjust description font size */
+    }
+
+    .profile-picture {
+        width: 70px; /* Further reduce profile picture size */
+        height: 70px;
+    }
+}
